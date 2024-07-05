@@ -292,6 +292,45 @@ console.log(`======= Q.1 ========`);
  const word4 = wordCount("I am passionate software devloper")
  console.log(` Q.4 The "I am passionate software devloper" Total Number Of Words is : ${word4}`);
  
+ 
+ console.log(`======= Step 11 ========`);
+ console.log(`======= To Palindrom ========`);
 
+function ispalindrom(str) {
+    let reverseStr = str.split("").reverse().join("");
+    console.log(`${reverseStr} is a Palindrom`);
+    
+}
+let sentence = "madam" ;
+console.log(`${sentence} : is a Palindrom`);
+
+let sentence1 = "banana" ;
+console.log(`${sentence1} : is  Not a Palindrom`);
+
+let sentence2 = "radar" ;
+console.log(`${sentence2} : is a Palindrom`);
+
+let sentence3 = "civil" ;
+console.log(`${sentence3} : is  Not a Palindrom`);
+
+let sentence4 = "noon" ;
+console.log(`${sentence4} : is a Palindrom`);
+
+let sentence5 = "starts" ;
+console.log(`${sentence5} : is  Not a Palindrom`);
+
+console.log(`======= Step 12 ========`);
+console.log(`======= To Anagram ========`);
+function isAnagram(str1,str2){
+    var a=str1.split("").sort().join("");
+    var b=str2.split("").sort().join("");
+    console.log(a===b ? "The passed word is "+str1 +" and " + str2 + " which are Anagram " : "The passed word is "+ str1 +" and " + str2 + " which are not Anagram"
+ 
+    );
+ 
+ }
+ isAnagram("silent","listen");
+ isAnagram("heart","earth");
+ isAnagram("debit card","credit card");
 
  
