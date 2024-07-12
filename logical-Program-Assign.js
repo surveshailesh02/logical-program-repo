@@ -333,4 +333,122 @@ function isAnagram(str1,str2){
  isAnagram("heart","earth");
  isAnagram("debit card","credit card");
 
- 
+ console.log(`======= Step 13 ========`);
+ console.log(`======= To Remove Character From Strings ========`);
+
+
+   function removeChar(str ,charToRemove) {
+    const regex = new RegExp(charToRemove, 'g');
+    return str.replace(regex, '');
+   }
+ const pairs = [
+    ["Java@Script",'@'],
+    ["Softyware", 'y'],
+    ["Code mind", ' ']
+ ];
+ pairs.forEach(pair => {
+    const str = pair[0];
+    const charToRemove = pair[1];
+    const result = removeChar(str, charToRemove);
+    console.log(`Original String: "${str}", Removed '${charToRemove}': "${result}"`);
+ });
+
+
+ console.log(`======= Step 14 ========`);
+ console.log(`======= To Reverse the Words From Strings ========`);
+
+ function reverseWord(str) {
+    const Words = str.split(' ');
+    const reverseWords = Words.map(Word =>{
+        return Word.split('').reverse().join('');
+    });
+    return reverseWords.join(' ');
+ }
+ const Strings = [ "Arise! Awake! and stop not until the goal is reached",
+                   "Learn with us, Job with us" ];
+
+  Strings.forEach(str =>{
+    const reversedString = reverseWord(str);
+    console.log(`Original String: "${str}"`);
+    console.log(`Reversed Words: "${reversedString}"`);
+    console.log(' ');
+  });
+  
+  console.log(`======= Step 15 ========`);
+  console.log(`======= To Swapping the Words From Strings ========`);
+
+  function swapWords(params) {
+    let wordOne = "Angular";
+    let wordTwo = "React";
+
+    [wordOne, wordTwo] = [wordTwo, wordOne];
+
+    console.log(`After swapping:`);
+    console.log(`wordOne: ${wordOne}`);
+    console.log(`wordTwo: ${wordTwo}`);
+  }
+
+  swapWords();
+
+  console.log(`======= Step 16 ========`);
+  console.log(`======= To Count the spaces From Strings ========`);
+
+  function spaceCount(str) {
+     let count = 0;
+     for (let index = 0; index < str.length; index++){
+        if (str[index] = ' ') {
+             count++;
+        }
+     }
+     return count;
+  }
+
+  const strings = [
+      "Revision is the mother of success",
+      "JavaScript is the language of internet world"
+  ];
+
+  strings.forEach(str =>{
+    const count = spaceCount(str);
+    console.log(`Number of spaces in "${str}" : ${count}`);
+  });
+
+  console.log(`======= Step 17 ========`);
+  console.log(`======= To Find The Numeric Digits ========`);
+
+  function digitCount(str) {
+   let count = 0;
+   for (let index = 0; index < str.length; index++) {
+    if (!isNaN(parseInt(str[index]))) {
+            count++;
+    }
+   } 
+   return count;
+  }
+   var string = [ "Codemind2019", "Twenty24", "Bharath1947India" ];
+
+  string.forEach(str =>{
+       const count = digitCount(str);
+       console.log(`Number of numeric digits in "${str}" : ${count}`);
+  })
+
+  console.log(`======= Step 18 ========`);
+  console.log(`======= To Count Consonants ========`);
+  function consonantsCount(str) {
+    const consonantsCount = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ";
+    let count = 0;
+
+    for (let index = 0; index < str.length; index++) {
+        if (consonantsCount.includes(str[index])) {
+            count++;
+        }
+        
+    }
+    return count;
+  }
+     var string = [ "JavaScript", "HTML and CSS", "Language of Internet",
+                    "I am UI Developer","Do or Die" ];
+
+    string.forEach(str=>{
+        console.log(`Number of consonants in "${str}" : ${consonantsCount(str)} `);
+    });
