@@ -452,3 +452,5 @@ function isAnagram(str1,str2){
     string.forEach(str=>{
         console.log(`Number of consonants in "${str}" : ${consonantsCount(str)} `);
     });
+
+
