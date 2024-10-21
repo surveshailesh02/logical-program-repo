@@ -1,12 +1,13 @@
 
    console.log("======  Interview Q. ===========");
    console.log("======== Reverse Str With 1st word as it is otp =============");
+   console.log(`======= Reverse String Existing Method ========`);
    
-
 var name="Welcome Shailesh";
 var reversedName = name.split(" ")[1].split("").reverse().join("");
 var result = "Welcome " + reversedName;
 console.log(result);
+
 
 var str = "welcome Shailesh";
 var result = str.split("").reverse("").join("");

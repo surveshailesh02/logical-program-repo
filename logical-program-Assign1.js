@@ -18,7 +18,7 @@ function calculateSum(arr) {
     }
     return sum
 }
-console.log("Sum Of All The Items In The Array:", calculateSum(array));
+console.log("Sum Of All The Items In The Array:", calculateSum(array1));
 
 console.log(`======= Step 3 ========`);
 console.log(`======= To Print Right Rotate The Elements From Array ========`);
